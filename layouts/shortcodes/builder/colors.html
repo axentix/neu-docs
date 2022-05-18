@@ -1,0 +1,46 @@
+<div class="tab full-width neu-flat rounded-2" id="color-tab">
+  <ul class="tab-menu">
+    <li class="tab-link">
+      <a href="#color-palette">Color palette</a>
+    </li>
+    <li class="tab-link">
+      <a href="#picker">Picker</a>
+    </li>
+  </ul>
+
+  <div id="color-palette" class="p-3">
+    <div class="grix xs5 gutter-xs0 md10 palette-picker m-3" id="paletteColors">
+      {{ $colors := slice "blue" "red" "green" "cyan" "magenta" "yellow" "orange" "viride" "amaranth"
+      "mole" "airforce" "meadow" "grey"  }}
+
+      {{ range $colors }}
+        {{ $color := . }}
+        {{ range $i, $sequence := (seq -4 5) }}
+          {{ if lt $sequence 0 }}<div class="p-3 {{ $color }} light{{ $sequence }} cursor-pointer"></div>{{ end }}
+          {{ if eq $sequence 0 }}<div class="p-3 {{ $color }} cursor-pointer"></div>{{ end }}
+          {{ if gt $sequence 0 }}<div class="p-3 {{ $color }} dark-{{ $sequence }} cursor-pointer"></div>{{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="d-flex fx-right my-3">
+      <button type="button" class="btn rounded-1 small neu-flat mx-auto mb-3 vself-center" id="add-color-palette-btn">
+        Add color
+      </button>
+    </div>
+  </div>
+
+
+  <div id="picker" class="p-3">
+    <div class="grix xs1">
+      <div id="color-picker"></div>
+      <div class="d-flex fx-center vcenter mt-2">
+        <button type="button" class="btn rounded-1 small neu-flat mr-2 vself-center" id="add-color-btn">
+          Add color
+        </button>
+        <div class="form-field m-0">
+          <input type="text" class="form-control neu-pressed rounded-1" id="color-preview" value="#2196f3" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

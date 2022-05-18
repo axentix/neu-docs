@@ -1,0 +1,16 @@
+.bg-blur {
+  &.bg-blur-top-left {
+    top: 30rem;
+    left: -15rem;
+
+    @include responsive('xs') {
+      top: 40rem;
+      left: -18rem;
+    }
+  }
+
+  &.bg-blur-bottom-left {
+    bottom: -9rem;
+    left: -9rem;
+  }
+}

@@ -1,0 +1,44 @@
+baseURL: ""
+languageCode: "en-us"
+title: "Docs"
+disableKinds: ["taxonomy", "taxonomyTerm", "section", "RSS"]
+sectionPagesMenu: "main"
+enableRobotsTXT: true
+defaultContentLanguage: "en"
+params:
+  current: 1.6.1
+  # versions:
+  #   - 2.0.x
+  #   - 1.3.x
+
+minify:
+  disableHTML: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+
+outputFormats:
+  manifest:
+    name: "webmanifest"
+    baseName: "webmanifest"
+    mediaType: "application/json"
+    notAlternative: "true"
+  browserconfig:
+    name: "browserconfig"
+    baseName: "browserconfig"
+    mediaType: "application/xml"
+    notAlternative: "true"
+
+outputs:
+  home: ["HTML", "WEBMANIFEST", "BROWSERCONFIG"]
+
+security:
+  funcs:
+    getenv: ['^HUGO_', '^AX_']

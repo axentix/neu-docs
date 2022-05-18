@@ -1,0 +1,129 @@
+---
+title: 'Colors'
+description: 'Neu-Axentix - Colros. The neumorphism colors have to be set to start using the shadows.'
+subtitle: ''
+type: 'docs'
+---
+
+<h2 class="subtitle" id="theme-colors">Theme colors</h2>
+
+<p>
+  To use a color theme, you just have to choose between the themes colors, and set the
+  <code class="language-markup">neu-{color}</code> class. <br />
+  The default theme colors are <code class="language-markup">dark</code> and <code class="language-markup">light</code> but you 
+  can create your own theme colors using our <a class="text-secondary" href="{{< ref "builder" >}}">builder</a>. <br />
+  <br />
+  Using a theme color, you can use any of our <a class="text-secondary" href="{{< ref "shadows" >}}">shadows</a>, and they will
+  work with any color theme. <br />
+  <strong
+    >Note that you need to add your neumorphism theme color class to an element before adding the shadow classes to the children.</strong
+  >
+</p>
+
+<h2 class="subtitle" id="detailed-steps">Detailed steps</h2>
+
+<p>
+  Choose a theme color, <code class="language-markup">neu-{light}</code> or <code class="language-markup">neu-{dark}</code>. <br>
+  <em>More colors using the <a class="text-secondary" href="{{< ref "builder" >}}">builder</a> page</em>.
+</p>
+
+<div class="neu-dark p-3">
+  <div class="p-4">I'm a dark theme empty item.</div>
+</div>
+
+<script type="text/plain" class="language-markup">
+  <div class="neu-dark p-3">
+    <div class="p-4">I'm a dark theme empty item.</div>
+  </div>
+</script>
+
+<p>
+  Choose a <a class="text-secondary" href="{{< ref "shadows" >}}">shadow type</a>, and apply it to any child of the themed parent. <br>
+  We will use the <code class="language-markup">concave</code> shadow for this example.
+</p>
+
+<div class="neu-dark p-3">
+  <div class="neu-concave rounded-3 p-4">I'm a dark theme concave item.</div>
+</div>
+
+<script type="text/plain" class="language-markup">
+  <div class="neu-dark p-3">
+    <div class="neu-concave rounded-3 p-4">I'm a dark theme concave item.</div>
+  </div>
+</script>
+
+<h2 id="nesting-theme-colors">Nesting theme colors</h2>
+
+<p>
+  You may want to <strong>change the color</strong> of your <strong>theme</strong> anywhere in your page. <br>
+  You can do that adding another <code class="language-markup">neu-{color}</code> class
+  <strong>even if you have set another theme color</strong> on a parent element.
+</p>
+
+<div class="neu-light p-3">
+  <div class="neu-flat rounded-3 p-4 mb-3">I'm a light theme flat item.</div>
+
+  <div class="neu-dark p-3">
+    <p class="mt-0 mb-2">I'm a dark theme part inside a light theme element.</p>
+    <div class="neu-concave rounded-3 p-4">I'm a dark theme concave item.</div>
+  </div>
+</div>
+
+<h2 class="lighten-and-darken-theme-colors">Lighten & darken theme colors</h2>
+
+<p>
+  You may want to <strong>lighten or darken</strong> your theme colors. <br>
+  Just add the <code class="language-markup">neu-bg-lighten</code> or <code class="language-markup">neu-bg-darken</code>
+  class on your <code class="language-markup">neu-{color}</code> element.
+</p>
+
+<div class="grix xs1 sm2 neu-light">
+  <div class="neu-light neu-bg-lighten p-3">
+    <p class="mt-0 mb-2">My background is lighten.</p>
+    <div class="neu-flat rounded-3 p-4 mb-3">I'm a flat shadow inside a lighten light theme.</div>
+  </div>
+  <div class="neu-light neu-bg-darken p-3">
+    <p class="mt-0 mb-2">My background is darken.</p>
+    <div class="neu-flat rounded-3 p-4 mb-3">I'm a flat shadow inside a darken light theme.</div>
+  </div>
+</div>
+
+<script type="text/plain" class="language-markup">
+  <div class="grix xs1 sm2 neu-light">
+    <div class="neu-light neu-bg-lighten p-3">
+      <p class="mt-0 mb-2">My background is lighten.</p>
+      <div class="neu-flat rounded-3 p-4 mb-3">I'm a flat shadow inside a lighten light theme.</div>
+    </div>
+    <div class="neu-light neu-bg-darken p-3">
+      <p class="mt-0 mb-2">My background is darken.</p>
+      <div class="neu-flat rounded-3 p-4 mb-3">I'm a flat shadow inside a darken light theme.</div>
+    </div>
+  </div>
+</script>
+
+<h2 class="lighten-and-darken-theme-colors">Background theme colors</h2>
+
+<p>
+  You may want to use the theme colors simply as <strong>background colors</strong>. <br>
+  To make it, use the <code class="language-markup">neu-bg-{color}</code> class on an element. <br>
+  The <code class="language-markup">neu-bg-lighten</code> & <code class="language-markup">neu-bg-darken</code>
+  classes are available too.
+</p>
+
+<div class="neu-bg-dark p-3">
+  I'm a dark element.
+</div>
+
+<div class="neu-bg-dark neu-bg-darken p-3">
+  I'm a dark darken element.
+</div>
+
+<script type="text/plain" class="language-markup">
+  <div class="neu-bg-dark p-3">
+    I'm a dark element.
+  </div>
+  
+  <div class="neu-bg-dark neu-bg-darken p-3">
+    I'm a dark darken element.
+  </div>
+</script>
