@@ -1,4 +1,4 @@
-<div class="rounded-2 p-3 relative-pos overflow-hidden bd-3 bd-solid bd-grey bd-light-3" id="download">
+<div class="rounded-2 p-3 relative-pos overflow-hidden bd-3 bd-solid bd-grey bd-light-3 mb-5" id="download">
   <div class="loading">
     <div class="spinner large text-blue">
       <svg viewBox="25 25 50 50">
@@ -30,7 +30,7 @@
     <button class="btn secondary rounded-1 mt-4 mx-auto d-block" type="submit" id="download-btn">Download</button>
 
     <div class="d-block text-center mt-3">
-      <a class="text-secondary font-w600 text-center mt-3 modal-trigger" href="" data-target="import-modal">Import theme</a>
+      <a class="text-secondary font-w600 text-center mt-3" href="" data-target="import-modal">Import theme</a>
       -
       <a class="text-secondary font-w600 text-center mt-3" href="" id="download-theme-btn">Download theme</a>
     </div>
@@ -38,10 +38,10 @@
 </div>
 
 <div class="modal shadow-1 neu-light rounded-3" id="import-modal">
-  <div class="modal-header">
+  <div class="modal-header d-flex">
     Import theme
-    <button data-target="import-modal" class="modal-trigger">
-      <i class="fas fa-times"></i>
+    <button class="btn btn-small d-flex transparent ml-auto" data-target="import-modal">
+      <span class="iconify" data-icon="fa6-solid:x"></span>
     </button>
   </div>
   <div class="modal-content">
