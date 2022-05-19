@@ -2,29 +2,32 @@
 title: 'Builder'
 description: 'Neu-Axentix - Builder. Choose the theme colors and download the generated shadows.'
 subtitle: ''
-type: 'docs'
+type: 'default'
 ---
 
-<h1 class="subtitle txt-center font-w400">Neu-Axentix Builder</h1>
+<div class="container">
+  <h1 class="subtitle txt-center font-w400">Neu-Axentix Builder</h1>
 
-<p>
-  This builder allow you to choose theme colors you want to <strong>add</strong> to <strong>Neu-Axentix</strong>.<br />
-  After choosing and adding them, give them their classnames, and you'll be able to download the css file.<br />
-  This file will provide you everything you need to use these new colors with our <strong>neumorphic shadow classes</strong> with the color
-  names you have set before.
-</p>
+  <p>
+    This builder allow you to choose theme colors you want to <strong>add</strong> to <strong>Neu-Axentix</strong>.<br />
+    After choosing and adding them, give them their classnames, and you'll be able to download the css file.<br />
+    This file will provide you everything you need to use these new colors with our <strong>neumorphic shadow classes</strong> with the
+    color names you have set before.
+  </p>
 
-<div class="grix xs1 gutter-xs3 mt-4">
-  <div>
-    <h2 class="subtitle" id="pick-a-color">Pick a color</h2>
-    {{< builder/colors >}}
-  </div>
-  <div class="d-flex fx-col">
-    <h2 class="subtitle" id="validate-it">Validate it</h2>
-    {{< builder/preview >}}
-  </div>
-  <div>
-    <h2 class="subtitle" id="download-your-new-theme">Download your new theme</h2>
-    {{< builder/download >}}
+  <div class="grix xs1 lg3 gutter-xs3 mt-4">
+    <div class="col-lg2 pos-row-md1">
+      <h2 class="subtitle" id="pick-a-color">Pick a color</h2>
+      {{< builder/colors >}}
+    </div>
+    <div class="col-lg2">
+      <h2 class="subtitle" id="download-your-new-theme">Download your new theme</h2>
+      {{< builder/download >}}
+    </div>
+    <div class="pos-row-xs2 col-lg1 pos-row-lg1 row-lg2">
+      <h2 class="hide-md-down text-center">Preview</h2>
+      <h2 class="hide-lg-up subtitle" id="validate-it">Preview</h2>
+      {{< builder/preview >}}
+    </div>
   </div>
 </div>

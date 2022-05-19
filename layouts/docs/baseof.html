@@ -11,8 +11,7 @@
       {{ $neu := resources.Get "neu-axentix/neu-axentix.min.css" | fingerprint }}
       {{ $base := resources.Get "sass/main.scss" | toCSS $options }}
       {{ $docs := resources.Get "sass/docs.scss" | toCSS $options }}
-      {{ $builder := resources.Get "sass/builder.scss" | toCSS $options }}
-      
+
       {{ $postCssOptions := dict "use" "autoprefixer" }}
       {{ $style := slice $base $docs | resources.Concat "docs.css" | resources.PostCSS $postCssOptions | fingerprint }}
       
@@ -21,10 +20,7 @@
     <link rel="stylesheet" href="{{ $axentix.RelPermalink }}" />
     <link rel="stylesheet" href="{{ $neu.RelPermalink }}" />
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-    {{ if eq .Title "Builder" }} 
-      {{ $builder := resources.Get "sass/builder.scss" | toCSS $options | resources.PostCSS | fingerprint }}
-    <link rel="stylesheet" href="{{ $builder.RelPermalink }}" />
-    {{ end }}
+
   </head>
 
   <body class="layout-under-navbar relative-pos">
@@ -50,7 +46,7 @@
             data-ea-publisher="useaxentix-com"
             data-ea-type="image"
             class="flat horizontal ml-auto z-index-1"
-            id="ads-docs"
+            id="neu-ads-docs"
           ></div>
         </div>
 
@@ -87,10 +83,6 @@
     <script src="{{$neu.RelPermalink}}"></script>
     <script src="{{$prism.RelPermalink}}"></script>
     <script src="{{$js.RelPermalink}}"></script>
-    {{ if eq .Title "Builder" }} 
-      {{ $builder := resources.Get "js/builder/builder.js" | js.Build | minify | fingerprint }}
-      <script src="{{$builder.RelPermalink}}"></script>
-    {{ end }}
     <script>
       const baseURL = '{{ .Site.BaseURL }}';
     </script>
@@ -102,9 +94,9 @@
     ></script>
     <script type="text/javascript">
       docsearch({
-        apiKey: '5eae298506cf8352bb7462dc2ff37f9d',
-        appId: 'M9XK4LRAZA',
-        indexName: 'useaxentix',
+        apiKey: '6d90a5c44a92566a517092ded5ea20ae',
+        appId: 'I5WREXGES7',
+        indexName: 'neu_useaxentix',
         container: '#search-input',
         debug: false,
       });
@@ -121,7 +113,7 @@
       }
       gtag('js', new Date());
 
-      gtag('config', 'UA-149763613-1');
+      gtag('config', 'UA-149763613-2');
     </script>
     {{ end }} {{ range .Page.Params.scripts }} {{- . | safeHTML -}} {{end}}
   </body>

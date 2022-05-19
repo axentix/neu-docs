@@ -70,7 +70,7 @@ main {
   @include responsive('sm-down') {
     flex-direction: column;
 
-    #ads-docs {
+    #neu-ads-docs {
       margin-left: 0 !important;
     }
   }

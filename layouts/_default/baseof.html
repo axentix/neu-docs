@@ -17,6 +17,12 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neu-axentix@1.6.1/dist/css/neu-axentix.min.css">
         <link rel="stylesheet" href="{{ $axentix.RelPermalink }}"/>
         <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
+
+        {{ $builder := resources.Get "sass/builder.scss" | toCSS $options }}
+        {{ if eq .Title "Builder" }} 
+            {{ $builder := resources.Get "sass/builder.scss" | toCSS $options | resources.PostCSS | fingerprint }}
+            <link rel="stylesheet" href="{{ $builder.RelPermalink }}" />
+        {{ end }}
     </head>
 
     <body class="layout relative-pos">
@@ -57,6 +63,10 @@
         <script src="{{$axentix.RelPermalink}}"></script>
         <script src="{{$prism.RelPermalink}}"></script>
         <script src="{{$js.RelPermalink}}"></script>
+        {{ if eq .Title "Builder" }} 
+        {{ $builder := resources.Get "js/builder/builder.js" | js.Build | minify | fingerprint }}
+            <script src="{{$builder.RelPermalink}}"></script>
+        {{ end }}
 
         {{ $env := getenv "AX_ENV" }}
         {{ if eq $env "production" }}
