@@ -11,12 +11,12 @@
 This repository is the official open source Neu-Axentix documentation.  
 This allows the documentation to be versioned and traduced.
 
-### Branches
+<!-- ### Branches
 
 Multiple branches are available :
  - The default branch <https://github.com/axentix/neu-docs> which is the docs corresponding to the latest Neu-Axentix version.
  - The docs branch <https://github.com/axentix/neu-docs/tree/gh-pages> which contains all generated docs versions
- - All the "v-x.x.x" branches containing the other Neu-Axentix documentation versions
+ - All the "v-x.x.x" branches containing the other Neu-Axentix documentation versions -->
 
 ## Contributing
 
