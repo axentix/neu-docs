@@ -1,0 +1,84 @@
+---
+name: deploy
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get latest neu-axentix version
+        id: neu-axentix-version
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: axentix/neumorphic
+          excludes: prerelease, draft
+
+      - name: Get destination directory
+        id: dest-dir
+        run: |
+          BRANCH=${GITHUB_REF##*/}
+          echo ::set-output name=DIR::${BRANCH:2}
+
+      - name: Get default branch
+        run: |
+          DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
+          echo "default_branch_ref=refs/heads/$DEFAULT_BRANCH" >> $GITHUB_ENV
+
+      - name: Install node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build main docs
+        if: ${{ env.default_branch_ref == github.ref }}
+        run: npm run build -- --minify --baseURL https://neu.useaxentix.com
+        env:
+          AX_ENV: production
+          AX_CURRENT_BRANCH: ${{ steps.dest-dir.outputs.DIR }}
+          AX_LATEST_VERSION: ${{ steps.neu-axentix-version.outputs.release }}
+
+      - name: Build docs
+        if: ${{ env.default_branch_ref != github.ref }}
+        run: npm run build -- --minify --baseURL https://neu.useaxentix.com/${{ steps.dest-dir.outputs.DIR }}
+        env:
+          AX_ENV: production
+          AX_CURRENT_BRANCH: ${{ steps.dest-dir.outputs.DIR }}
+          AX_LATEST_VERSION: ${{ steps.neu-axentix-version.outputs.release }}
+
+      - name: Get versions
+        id: versions
+        run: |
+          BRANCHES=$(git branch -r --list origin/v-* | tr '*' ' ' | tr 'origin/v-' ' ' | xargs | tr ' ' '\n')
+          BRANCHES="${BRANCHES//'%'/'%25'}"
+          BRANCHES="${BRANCHES//$'\n'/'%0A'}"
+          BRANCHES="${BRANCHES//$'\r'/'%0D'}"
+          echo ::set-output name=VERSIONS::${BRANCHES}
+
+      - name: Deploy main docs
+        if: ${{ env.default_branch_ref == github.ref }}
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: ./public
+          clean-exclude: "${{ steps.versions.outputs.VERSIONS }}"
+
+      - name: Deploy docs
+        if: ${{ env.default_branch_ref != github.ref }}
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: ./public
+          target-folder: ${{ steps.dest-dir.outputs.DIR }}
