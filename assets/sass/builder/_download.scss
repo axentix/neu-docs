@@ -44,9 +44,5 @@
     justify-content: center;
     align-items: center;
     transition: color 0.2s ease;
-
-    &:hover {
-      color: getColor('grey', 'dark', 3);
-    }
   }
 }

@@ -1,54 +1,79 @@
-<div class="mx-auto builder-preview neu-build-bg z-index-1">
-  <nav class="navbar neu-build-flat">
-    <div class="navbar-brand font-w300">Preview</div>
-    <div class="navbar-menu ml-auto lh-normal">
-      <a class="navbar-link rounded-2 neu-build-flat" data-neu-build-click="neu-build-pressed"><i class="fas fa-bars"></i></a>
-    </div>
-  </nav>
+<div class="d-flex fx-center relative-pos" id="neumorph-preview">
+  <div class="device device-iphone-x neu-iphone mt-3">
+    <div class="device-frame z-index-2">
+      <div class="device-content d-flex fx-col z-index-1 builder-preview neu-build-bg" data-neu>
+        <div class="d-flex w100 pt-5 px-4">
+          <button
+            data-neu-build-click="neu-build-pressed"
+            class="btn btn-small btn-circle neu-build-flat neu-small d-flex vcenter fx-center"
+            aria-label="Fake back button"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:chevron-left"></span>
+          </button>
+          <span class="text-center mx-auto w100 my-auto font-s1">Insane song app</span>
+          <button
+            data-neu-build-clicked="neu-build-pressed"
+            class="btn btn-small btn-circle neu-build-flat neu-small ml-auto d-flex fx-center vcenter"
+            aria-label="Fake back button"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:headphones"></span>
+          </button>
+        </div>
 
-  <div class="main mt-3">
-    <div class="mx-3 grix xs1 gutter-xs2">
-      <div class="card neu-build-flat rounded-2 grix xs4 px-2 py-3 d-grid">
-        <a href="https://twitter.com/AxelSimonet" target="_blank" rel="noopener" class="rounded-full cursor-default">
-          <img
-            src="https://pbs.twimg.com/profile_images/1231644783506075649/8n9VHm0g_400x400.jpg"
-            alt="Axel SIMONET"
-            width="40"
-            height="40"
-            class="rounded-full my-auto"
-          />
-        </a>
-        <p class="span-txt txt-center my-auto mb-1 col-xs2"><strong>Axel</strong> followed you</p>
-        <div class="main-circle rounded-full mx-auto neu-build-convex my-auto cursor-pointer" data-neu-build-click="neu-build-pressed">
-          <i class="fas fa-user"></i>
+        <img
+          id="song-image"
+          class="responsive-media mx-auto mt-4 mb-3 rounded-full neu-build-bordered neu-large"
+          src="{{ .Site.BaseURL }}/img/headphones.jpg"
+          alt="song-image"
+        />
+
+        <span class="text-center font-s3">Song name</span>
+        <span class="text-center font-s1 mt-1">Ft prestige music</span>
+
+        <div class="d-flex mx-5 pb-1 mt-5 song-time">
+          <span class="font-s1">2:12</span>
+          <span class="ml-auto font-s1">3:08</span>
+        </div>
+        <div class="relative-pos">
+          <div class="progress rounded-2 progress-small mx-auto">
+            <div class="progress-bar grey dark-2" style="width: 70%"></div>
+          </div>
+
+          <div class="progress-thumb shadow-1"></div>
+        </div>
+
+        <div class="footer mt-auto mb-5 fx-center pl-0">
+          <button
+            data-neu-build-click="neu-build-pressed"
+            class="btn btn-circle btn-small mr-4 neu-build-convex neu-small d-flex fx-center vcenter"
+            aria-label="Fake previous"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:skip-backward"></span>
+          </button>
+          <button
+            class="btn btn-circle large mx-1 neu-build-concave neu-small font-s3 d-flex fx-center vcenter"
+            aria-label="Fake play"
+            data-neu-build-click="neu-build-bordered"
+          >
+            <span class="iconify-inline font-s6" data-icon="mdi:play"></span>
+          </button>
+          <button
+            data-neu-build-click="neu-build-pressed"
+            class="btn btn-circle btn-small ml-4 neu-build-convex neu-small d-flex fx-center vcenter"
+            aria-label="Fake next"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:skip-forward"></span>
+          </button>
         </div>
       </div>
-
-      <div class="card neu-build-flat rounded-2 grix xs4 px-2 py-3 d-grid">
-        <a href="https://twitter.com/VincentLvqe" target="_blank" rel="noopener" class="rounded-full cursor-default">
-          <img
-            src="https://avatars2.githubusercontent.com/u/49057921?s=460&u=6a5cc19eddaeaee60f02a972889e6f6ff058f631&v=4"
-            alt="Vincent LEVEQUE"
-            width="40"
-            height="40"
-            class="rounded-full my-auto"
-          />
-        </a>
-        <p class="span-txt txt-center my-auto mb-1 col-xs2"><strong>Vincent</strong> liked your post</p>
-        <div class="main-circle rounded-full mx-auto neu-build-concave my-auto cursor-pointer" data-neu-build-clicked="neu-build-bordered">
-          <i class="far fa-heart"></i>
-        </div>
-      </div>
-
-      <div class="neu-build-bordered mx-auto px-3 py-2 font-w300 rounded-2 txt-center">More...</div>
     </div>
-  </div>
-
-  <div class="footer fx-center txt-center grix xs3">
-    <div class="footer-circle rounded-full neu-build-pressed my-2 cursor-pointer" data-neu-build-hover="neu-build-flat">
-      <i class="fas fa-home"></i>
-    </div>
+    <div class="device-stripe"></div>
+    <div class="device-header z-index-3"></div>
+    <div class="device-sensors"></div>
+    <div class="device-btns"></div>
+    <div class="device-power"></div>
+    <div class="device-home"></div>
   </div>
 </div>
 
-<p class="txt-center">This preview allow you to see what you will get using the selected color.</p>
+<p class="text-center">This preview allow you to see what you will get using the selected color.</p>

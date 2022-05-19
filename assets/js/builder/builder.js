@@ -21,7 +21,7 @@ const toast = new Axentix.Toast('', {
 
 const NeuDownload = (() => {
   const colorPicker = iro.ColorPicker('#color-picker', {
-    color: '#2196f3',
+    color: '#222',
     width: 180,
     layoutDirection: 'horizontal',
     display: 'flex',
@@ -122,7 +122,7 @@ const NeuDownload = (() => {
     colorDiv.innerHTML = `
     <label for="${color}" style="background-color: ${color};"></label>
     .neu-<input type="text" required class="form-control ml-1 neu-pressed rounded-1" id="${color}" name="${name}" value="${name}" placeholder="classname">
-    <div class="close"><i class="fas fa-times"></i></div>
+    <div class="close"><span class="iconify" data-icon="fa6-solid:x"></span></div>
     `;
     const input = colorDiv.querySelector('input');
     input.updateRef = updateColorName.bind(input);

@@ -16,6 +16,14 @@ body {
   z-index: -1;
 }
 
+h1 {
+  font-size: 3.5rem;
+
+  @include responsive('xs') {
+    font-size: 2.5rem !important;
+  }
+}
+
 .sidenav {
   background-color: #fff;
   color: #000;

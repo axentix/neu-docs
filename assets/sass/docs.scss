@@ -14,8 +14,8 @@
 
 html,
 body {
-  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 main {
@@ -236,12 +236,3 @@ h4.subtitle {
 @import './docs/dark';
 @import './docs/blur_effect';
 @import './docs/code';
-@import './docs/try-it';
-@import './docs/buttons';
-@import './docs/collapsibles';
-@import './docs/colors';
-@import './docs/footers';
-@import './docs/grix';
-@import './docs/shadows';
-@import './docs/trends';
-@import './docs/utilities';
