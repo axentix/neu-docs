@@ -118,10 +118,10 @@ const NeuDownload = (() => {
 
     colors.push(color);
     let colorDiv = document.createElement('div');
-    colorDiv.className = 'form-field form-default form-inline';
+    colorDiv.className = 'form-field form-inline form-default';
     colorDiv.innerHTML = `
     <label for="${color}" style="background-color: ${color};"></label>
-    .neu-<input type="text" required class="form-control ml-1 neu-pressed rounded-1" id="${color}" name="${name}" value="${name}" placeholder="classname">
+    .neu-<input type="text" required class="form-control ml-1 rounded-1 bd-solid bd-3 bd-grey bd-light-2 shadow-0" id="${color}" name="${name}" value="${name}" placeholder="classname">
     <div class="close"><span class="iconify" data-icon="fa6-solid:x"></span></div>
     `;
     const input = colorDiv.querySelector('input');
