@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Neu-Axentix - Modern framework to build websites faster</title>
+        
+        <meta name="description" content="The official Axentix neumorphism design implementation. Start using neumorphism shadows in 3 easy steps." />
+        <meta property="og:description" content="The official Axentix neumorphism design implementation. Start using neumorphism shadows in 3 easy steps." />
+        <meta property="og:title" content="Axentix - Modern framework to build websites faster" /><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="author" content="Axentix Team" />
+<meta name="copyright" content="axentix team" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://neu.useaxentix.com" />
+<meta property="og:image" content="https://neu.useaxentix.com/img/logoOG.jpg" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://neu.useaxentix.com/apple-touch-icon.png?v=2" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://neu.useaxentix.com/favicon-32x32.png?v=2" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://neu.useaxentix.com/favicon-16x16.png?v=2" />
+<link rel="manifest" href="https://neu.useaxentix.com/webmanifest.json?v=2" />
+<link rel="mask-icon" href="https://neu.useaxentix.com/safari-pinned-tab.svg?v=2" color="#2196f3" />
+<meta name="msapplication-TileColor" content="#2d89ef" />
+<meta name="theme-color" content="#1e1f33" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+
+        
+        
+        
+
+        
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neu-axentix@1.6.1/dist/css/neu-axentix.min.css">
+        <link rel="stylesheet" href="/axentix/axentix.min.6a9337152b2c40b8d0a5e0eb4c14d70293851083669c99d8fd921fa5ebb9450a.css"/>
+        <link rel="stylesheet" href="/home.min.ec2250e50c53d44453d3fb052289566f3edbe5ce49f90839b0c739dee3cc52a9.css"/>
+
+        
+        
+    </head>
+
+    <body class="layout relative-pos"><header>
+  <div class="navbar-fixed">
+    <nav class="navbar lh-normal" id="main-navbar">
+      <button
+        data-target="main-sidenav"
+        class="btn hide-md-up font-s5"
+        aria-label="Menu button"
+      >
+        <span class="iconify-inline" data-icon="mdi:menu"></span> 
+      </button>
+
+      <div class="navbar-brand font-w600 z-index-2 d-flex lh-normal mr-2">
+        <img src="https://neu.useaxentix.com/img/neu-axentix.svg" alt="Neu-Axentix logo" class="navbar-logo ml-2 mr-1" />xentix
+      </div>
+
+      <div class="navbar-menu hide-sm-down navbar-centered">
+        <a class="navbar-link font-w600" href="https://neu.useaxentix.com">Home</a>
+        <a class="navbar-link font-w600" href="https://neu.useaxentix.com/docs/getting-started/">Documentation</a>
+        <a class="navbar-link font-w600" href="https://neu.useaxentix.com/docs/builder/">Builder</a>
+      </div>
+
+      <div class="navbar-menu ml-auto font-s5">
+        <div id="search-input" class="my-auto font-s2"></div>
+        <a class="navbar-link font-w600 px-1 hide-xs" href="https://github.com/axentix/axentix" target="_blank" rel="noopener" aria-label="Github">
+          <span class="iconify-inline" data-icon="mdi:github"></span>
+        </a>
+
+        <a
+          class="navbar-link px-1 hide-xs"
+          aria-label="Twitter"
+          href="https://twitter.com/UseAxentix"
+          target="_blank"
+          rel="noopener"
+          >
+          <span class="iconify-inline" data-icon="mdi:twitter"></span> 
+        </a>
+
+        <a class="navbar-link font-w600 px-1 hide-xs" href="https://discord.useaxentix.com/" target="_blank" rel="noopener" aria-label="Discord">
+          <span class="iconify-inline" data-icon="mdi:discord"></span>
+        </a>
+
+        <div class="dropdown site-dropdown" id="toggle-dropdown" data-ax="dropdown">
+          <span class="navbar-link font-w600 px-1 ml-3" data-target="toggle-dropdown" aria-label="Toggle dark mode">
+            <span class="iconify-inline" data-icon="ic:round-wb-sunny"></span>
+            <span class="iconify-inline" data-icon="fa-regular:moon"></span>
+          </span>
+
+          <div class="dropdown-content dropdown-right font-s2 rounded-2 light-shadow-1 mt-4">
+            <span class="dropdown-item cursor-pointer" id="toggle-light"><span class="iconify-inline mr-1" data-icon="ic:round-wb-sunny"></span> Light</span>
+            <span class="dropdown-item cursor-pointer" id="toggle-dark"><span class="iconify-inline mr-1" data-icon="fa-regular:moon"></span> Dark</span>
+            <span class="dropdown-item cursor-pointer" id="toggle-system"><span class="iconify-inline mr-1" data-icon="mdi:cog"></span> System</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="main-sidenav" class="sidenav light-shadow-2"><div class="sidenav-header hide-md-up">
+  <button data-target="main-sidenav" aria-label="Close sidenav" class="btn btn-circle btn-small hide-md-up sidenav-cross"><span class="iconify-inline font-s4" data-icon="mdi:close"></span></button>
+  <img class="docs-logo sidenav-logo hide-md-up" src="https://neu.useaxentix.com/img/neu-axentix.svg" alt="Axentix Logo" />
+</div>
+
+<div class="sidenav-content pt-4">
+  <div class="hide-md-up">
+    <a href="https://neu.useaxentix.com" class="sidenav-link">Home</a>
+    <div class="divider"></div>
+  </div>
+  
+  <a href="https://neu.useaxentix.com/docs/getting-started/" class="sidenav-link ">
+    Getting started
+  </a>
+
+  <a href="https://neu.useaxentix.com/docs/colors/" class="sidenav-link ">
+    Colors
+  </a>
+
+  <a href="https://neu.useaxentix.com/docs/shadows/" class="sidenav-link ">
+    Shadows
+  </a>
+
+  <a href="https://neu.useaxentix.com/docs/builder/" class="sidenav-link ">
+    Builder
+  </a>
+</div>
+
+<a id="discord-footer" href="https://discord.useaxentix.com/" target="_blank" rel="noopener" class="sidenav-footer text-center grey dark-5">
+  <span class="iconify-inline" data-icon="mdi:discord"></span> &nbsp;
+  Join us
+</a>
+</div>
+
+        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <linearGradient id="svg-gradient" x1=".5" y1="1" x2=".5">
+            <stop stop-color="#ff7600"></stop>
+            <stop offset="1" stop-color="#ffd526"></stop>
+        </linearGradient>
+        </svg>
+    
+        <div class="overflow-hidden w100 bg-blur-wrapper absolute-pos">
+            <div class="bg-blur bg-blur-top-right rounded-full" style="background: #e0397e"></div>
+            <div class="bg-blur bg-blur-top-left secondary rounded-full"></div>
+        </div>
+
+        <main>
+
+<div class="h100 d-flex fx-center vcenter fx-col">
+  <img src="https://neu.useaxentix.com/img/404.svg" alt="404 page not found" class="responsive-media" width="500" />
+
+  <h1 class="font-s7 my-5">Page not found</h1>
+
+  <a href="https://neu.useaxentix.com" class="btn airforce dark-4 shadow-1 rounded-1">Back home</a>
+</div>
+
+
+        </main><footer class="footer fx-center text-center">Neumorph Axentix Framework - Made with ♥ by Axel SIMONET & Vincent LEVEQUE</footer>
+
+        
+        
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/neu-axentix@1.6.1/dist/js/neu-axentix.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@2.1.2/dist/iconify.min.js" integrity="sha256-yjIu0AqCpNVrJGG7vGaQ3Vh31hkcPFqOl+gdQQ8jrdg=" crossorigin="anonymous"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script src="/axentix/axentix.min.c38c5daa9940041bc65062911d578031b85c3b56e5e60f2903f5a5a97166f4ec.js"></script>
+        <script src="/js/prism.8c7a75416846abdaf741adfbefbd3a22e48bae7de42a029ab0fad37e0101cb40.js"></script>
+        <script src="/js/home.min.7cdc20e22f56714f69c83f8c104555b002aa9d79f63a336208b2ca16b334aced.js"></script>
+        
+
+        
+        
+        <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149763613-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+  
+          gtag('config', 'UA-149763613-2');
+        </script>
+        
+    </body>
+</html>

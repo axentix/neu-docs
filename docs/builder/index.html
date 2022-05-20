@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Neu-Axentix - Modern framework to build websites faster</title>
+        
+        <meta name="description" content="Neu-Axentix - Builder. Choose the theme colors and download the generated shadows." />
+        <meta property="og:description" content="Neu-Axentix - Builder. Choose the theme colors and download the generated shadows." />
+        <meta property="og:title" content="Axentix - Modern framework to build websites faster" /><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="author" content="Axentix Team" />
+<meta name="copyright" content="axentix team" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://neu.useaxentix.com" />
+<meta property="og:image" content="https://neu.useaxentix.com/img/logoOG.jpg" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://neu.useaxentix.com/apple-touch-icon.png?v=2" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://neu.useaxentix.com/favicon-32x32.png?v=2" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://neu.useaxentix.com/favicon-16x16.png?v=2" />
+<link rel="manifest" href="https://neu.useaxentix.com/webmanifest.json?v=2" />
+<link rel="mask-icon" href="https://neu.useaxentix.com/safari-pinned-tab.svg?v=2" color="#2196f3" />
+<meta name="msapplication-TileColor" content="#2d89ef" />
+<meta name="theme-color" content="#1e1f33" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+
+        
+        
+        
+
+        
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/neu-axentix@1.6.1/dist/css/neu-axentix.min.css">
+        <link rel="stylesheet" href="/axentix/axentix.min.6a9337152b2c40b8d0a5e0eb4c14d70293851083669c99d8fd921fa5ebb9450a.css"/>
+        <link rel="stylesheet" href="/home.min.ec2250e50c53d44453d3fb052289566f3edbe5ce49f90839b0c739dee3cc52a9.css"/>
+
+        
+         
+            
+            <link rel="stylesheet" href="/css/style.1613d2c6833f7dd5cef254f66913386e399f3446844b66c99fb8177a4d0b5831.css" />
+        
+    </head>
+
+    <body class="layout relative-pos"><header>
+  <div class="navbar-fixed">
+    <nav class="navbar lh-normal" id="main-navbar">
+      <button
+        data-target="main-sidenav"
+        class="btn hide-md-up font-s5"
+        aria-label="Menu button"
+      >
+        <span class="iconify-inline" data-icon="mdi:menu"></span> 
+      </button>
+
+      <div class="navbar-brand font-w600 z-index-2 d-flex lh-normal mr-2">
+        <img src="https://neu.useaxentix.com/img/neu-axentix.svg" alt="Neu-Axentix logo" class="navbar-logo ml-2 mr-1" />xentix
+      </div>
+
+      <div class="navbar-menu hide-sm-down navbar-centered">
+        <a class="navbar-link font-w600" href="https://neu.useaxentix.com">Home</a>
+        <a class="navbar-link font-w600" href="https://neu.useaxentix.com/docs/getting-started/">Documentation</a>
+        <a class="navbar-link font-w600" href="https://neu.useaxentix.com/docs/builder/">Builder</a>
+      </div>
+
+      <div class="navbar-menu ml-auto font-s5">
+        <div id="search-input" class="my-auto font-s2"></div>
+        <a class="navbar-link font-w600 px-1 hide-xs" href="https://github.com/axentix/axentix" target="_blank" rel="noopener" aria-label="Github">
+          <span class="iconify-inline" data-icon="mdi:github"></span>
+        </a>
+
+        <a
+          class="navbar-link px-1 hide-xs"
+          aria-label="Twitter"
+          href="https://twitter.com/UseAxentix"
+          target="_blank"
+          rel="noopener"
+          >
+          <span class="iconify-inline" data-icon="mdi:twitter"></span> 
+        </a>
+
+        <a class="navbar-link font-w600 px-1 hide-xs" href="https://discord.useaxentix.com/" target="_blank" rel="noopener" aria-label="Discord">
+          <span class="iconify-inline" data-icon="mdi:discord"></span>
+        </a>
+
+        <div class="dropdown site-dropdown" id="toggle-dropdown" data-ax="dropdown">
+          <span class="navbar-link font-w600 px-1 ml-3" data-target="toggle-dropdown" aria-label="Toggle dark mode">
+            <span class="iconify-inline" data-icon="ic:round-wb-sunny"></span>
+            <span class="iconify-inline" data-icon="fa-regular:moon"></span>
+          </span>
+
+          <div class="dropdown-content dropdown-right font-s2 rounded-2 light-shadow-1 mt-4">
+            <span class="dropdown-item cursor-pointer" id="toggle-light"><span class="iconify-inline mr-1" data-icon="ic:round-wb-sunny"></span> Light</span>
+            <span class="dropdown-item cursor-pointer" id="toggle-dark"><span class="iconify-inline mr-1" data-icon="fa-regular:moon"></span> Dark</span>
+            <span class="dropdown-item cursor-pointer" id="toggle-system"><span class="iconify-inline mr-1" data-icon="mdi:cog"></span> System</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<div id="main-sidenav" class="sidenav light-shadow-2"><div class="sidenav-header hide-md-up">
+  <button data-target="main-sidenav" aria-label="Close sidenav" class="btn btn-circle btn-small hide-md-up sidenav-cross"><span class="iconify-inline font-s4" data-icon="mdi:close"></span></button>
+  <img class="docs-logo sidenav-logo hide-md-up" src="https://neu.useaxentix.com/img/neu-axentix.svg" alt="Axentix Logo" />
+</div>
+
+<div class="sidenav-content pt-4">
+  <div class="hide-md-up">
+    <a href="https://neu.useaxentix.com" class="sidenav-link">Home</a>
+    <div class="divider"></div>
+  </div>
+  
+  <a href="https://neu.useaxentix.com/docs/getting-started/" class="sidenav-link ">
+    Getting started
+  </a>
+
+  <a href="https://neu.useaxentix.com/docs/colors/" class="sidenav-link ">
+    Colors
+  </a>
+
+  <a href="https://neu.useaxentix.com/docs/shadows/" class="sidenav-link ">
+    Shadows
+  </a>
+
+  <a href="https://neu.useaxentix.com/docs/builder/" class="sidenav-link active">
+    Builder
+  </a>
+</div>
+
+<a id="discord-footer" href="https://discord.useaxentix.com/" target="_blank" rel="noopener" class="sidenav-footer text-center grey dark-5">
+  <span class="iconify-inline" data-icon="mdi:discord"></span> &nbsp;
+  Join us
+</a>
+</div>
+
+        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <linearGradient id="svg-gradient" x1=".5" y1="1" x2=".5">
+            <stop stop-color="#ff7600"></stop>
+            <stop offset="1" stop-color="#ffd526"></stop>
+        </linearGradient>
+        </svg>
+    
+        <div class="overflow-hidden w100 bg-blur-wrapper absolute-pos">
+            <div class="bg-blur bg-blur-top-right rounded-full" style="background: #e0397e"></div>
+            <div class="bg-blur bg-blur-top-left secondary rounded-full"></div>
+        </div>
+
+        <main>
+  
+<div class="container">
+  <h1 class="subtitle txt-center font-w400">Neu-Axentix Builder</h1>
+
+  <p>
+    This builder allow you to choose theme colors you want to <strong>add</strong> to <strong>Neu-Axentix</strong>.<br />
+    After choosing and adding them, give them their classnames, and you'll be able to download the css file.<br />
+    This file will provide you everything you need to use these new colors with our <strong>neumorphic shadow classes</strong> with the
+    color names you have set before.
+  </p>
+
+  <div class="grix xs1 lg3 gutter-xs3 mt-4">
+    <div class="col-lg2 pos-row-md1">
+      <h2 class="subtitle" id="pick-a-color">Pick a color</h2>
+      <div class="tab full-width rounded-2 bd-solid bd-3 bd-grey bd-light-3 pb-3" id="color-tab">
+  <ul class="tab-menu">
+    <li class="tab-link">
+      <a href="#color-palette">Color palette</a>
+    </li>
+    <li class="tab-link">
+      <a href="#picker">Picker</a>
+    </li>
+  </ul>
+
+  <div id="color-palette" class="p-3">
+    <div class="grix xs5 gutter-xs0 md10 palette-picker m-3" id="paletteColors">
+      
+
+      
+        
+        
+          <div class="p-3 blue light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 blue light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 blue light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 blue light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 blue cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 blue dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 blue dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 blue dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 blue dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 blue dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 red light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 red light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 red light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 red light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 red cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 red dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 red dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 red dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 red dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 red dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 green light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 green light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 green light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 green light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 green cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 green dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 green dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 green dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 green dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 green dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 cyan light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 cyan light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 cyan light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 cyan light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 cyan cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 cyan dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 cyan dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 cyan dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 cyan dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 cyan dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 magenta light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 magenta light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 magenta light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 magenta light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 magenta cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 magenta dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 magenta dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 magenta dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 magenta dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 magenta dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 yellow light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 yellow light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 yellow light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 yellow light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 yellow cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 yellow dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 yellow dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 yellow dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 yellow dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 yellow dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 orange light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 orange light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 orange light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 orange light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 orange cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 orange dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 orange dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 orange dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 orange dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 orange dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 viride light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 viride light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 viride light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 viride light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 viride cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 viride dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 viride dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 viride dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 viride dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 viride dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 amaranth light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 amaranth light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 amaranth light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 amaranth light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 amaranth cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 amaranth dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 amaranth dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 amaranth dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 amaranth dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 amaranth dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 mole light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 mole light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 mole light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 mole light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 mole cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 mole dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 mole dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 mole dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 mole dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 mole dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 airforce light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 airforce light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 airforce light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 airforce light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 airforce cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 airforce dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 airforce dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 airforce dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 airforce dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 airforce dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 meadow light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 meadow light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 meadow light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 meadow light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 meadow cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 meadow dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 meadow dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 meadow dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 meadow dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 meadow dark-5 cursor-pointer"></div>
+        
+      
+        
+        
+          <div class="p-3 grey light-4 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 grey light-3 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 grey light-2 cursor-pointer"></div>
+          
+          
+        
+          <div class="p-3 grey light-1 cursor-pointer"></div>
+          
+          
+        
+          
+          <div class="p-3 grey cursor-pointer"></div>
+          
+        
+          
+          
+          <div class="p-3 grey dark-1 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 grey dark-2 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 grey dark-3 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 grey dark-4 cursor-pointer"></div>
+        
+          
+          
+          <div class="p-3 grey dark-5 cursor-pointer"></div>
+        
+      
+    </div>
+    <div class="d-flex fx-right my-3">
+      <button type="button" class="btn secondary rounded-1 small mx-auto mt-3" id="add-color-palette-btn">
+        Add color
+      </button>
+    </div>
+  </div>
+
+
+  <div id="picker" class="p-3">
+    <div class="grix xs1">
+      <div id="color-picker"></div>
+      <div class="d-flex fx-center vcenter mt-2">
+        <button type="button" class="btn secondary rounded-1 small mr-2 vself-center" id="add-color-btn">
+          Add color
+        </button>
+        <div class="form-field m-0">
+          <input type="text" class="form-control neu-pressed rounded-1" id="color-preview" value="#2196f3" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+    <div class="col-lg2">
+      <h2 class="subtitle" id="download-your-new-theme">Download your new theme</h2>
+      <div class="rounded-2 p-3 relative-pos overflow-hidden bd-3 bd-solid bd-grey bd-light-3 mb-5" id="download">
+  <div class="loading">
+    <div class="spinner large text-blue">
+      <svg viewBox="25 25 50 50">
+        <circle class="spinner-path" cx="50" cy="50" r="20" fill="none" stroke-width="3" />
+      </svg>
+    </div>
+    <p class="text-black mt-3 font-w500">Loading...</p>
+  </div>
+
+  <form class="form-material form-material-bordered">
+    <div class="grix xs1">
+      <div class="color-list"></div>
+      <input type="hidden" id="colors" name="colors" />
+      <div class="form-field">
+        <label for="suffix">Suffix</label>
+        <input class="form-control rounded-1" required type="text" id="suffix" name="suffix" value="custom" />
+      </div>
+      <div class="form-field">
+        <label class="form-check ml-0">
+          <input type="checkbox" checked required id="minify" name="minify" />
+          <span>Minify file</span>
+        </label>
+      </div>
+      <div class="text-grey">
+        Filename: neu-axentix-<span id="filename-suffix">custom</span><span id="filename-extension">.min.css</span>
+      </div>
+    </div>
+    <div class="mt-3 d-flex fx-center" id="captcha"></div>
+    <button class="btn secondary rounded-1 mt-4 mx-auto d-block" type="submit" id="download-btn">Download</button>
+
+    <div class="d-block text-center mt-3">
+      <a class="text-secondary font-w600 text-center mt-3" href="" data-target="import-modal">Import theme</a>
+      -
+      <a class="text-secondary font-w600 text-center mt-3" href="" id="download-theme-btn">Download theme</a>
+    </div>
+  </form>
+</div>
+
+<div class="modal shadow-1 neu-light rounded-3" id="import-modal">
+  <div class="modal-header d-flex">
+    Import theme
+    <button class="btn btn-small d-flex transparent ml-auto" data-target="import-modal">
+      <span class="iconify" data-icon="fa6-solid:x"></span>
+    </button>
+  </div>
+  <div class="modal-content">
+    <form>
+      <div class="form-file pb-3">
+        <label for="theme-input" class="btn rounded-1 neu-convex">Theme</label>
+        <input type="file" name="theme-input" id="theme-input" accept="application/json" />
+        <div class="form-file-path"></div>
+      </div>
+
+      <button
+        class="btn rounded-1 neu-flat mx-auto mt-3 d-block"
+        data-neu-click="neu-pressed"
+        type="submit"
+        id="import-theme-btn"
+      >
+        Import
+      </button>
+    </form>
+  </div>
+</div>
+
+    </div>
+    <div class="pos-row-xs2 col-lg1 pos-row-lg1 row-lg2">
+      <h2 class="hide-md-down text-center">Preview</h2>
+      <h2 class="hide-lg-up subtitle" id="validate-it">Preview</h2>
+      <div class="d-flex fx-center relative-pos" id="neumorph-preview">
+  <div class="device device-iphone-x neu-iphone mt-3">
+    <div class="device-frame z-index-2">
+      <div class="device-content d-flex fx-col z-index-1 builder-preview neu-build-bg" data-neu>
+        <div class="d-flex w100 pt-5 px-4">
+          <button
+            data-neu-build-click="neu-build-pressed"
+            class="btn btn-small btn-circle neu-build-flat neu-small d-flex vcenter fx-center"
+            aria-label="Fake back button"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:chevron-left"></span>
+          </button>
+          <span class="text-center mx-auto w100 my-auto font-s1">Insane song app</span>
+          <button
+            data-neu-build-clicked="neu-build-pressed"
+            class="btn btn-small btn-circle neu-build-flat neu-small ml-auto d-flex fx-center vcenter"
+            aria-label="Fake back button"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:headphones"></span>
+          </button>
+        </div>
+
+        <img
+          id="song-image"
+          class="responsive-media mx-auto mt-4 mb-3 rounded-full neu-build-bordered neu-large"
+          src="https://neu.useaxentix.com/img/headphones.jpg"
+          alt="song-image"
+        />
+
+        <span class="text-center font-s3">Song name</span>
+        <span class="text-center font-s1 mt-1">Ft prestige music</span>
+
+        <div class="d-flex mx-5 pb-1 mt-5 song-time">
+          <span class="font-s1">2:12</span>
+          <span class="ml-auto font-s1">3:08</span>
+        </div>
+        <div class="relative-pos">
+          <div class="progress rounded-2 progress-small mx-auto">
+            <div class="progress-bar grey dark-2" style="width: 70%"></div>
+          </div>
+
+          <div class="progress-thumb shadow-1"></div>
+        </div>
+
+        <div class="footer mt-auto mb-5 fx-center pl-0">
+          <button
+            data-neu-build-click="neu-build-pressed"
+            class="btn btn-circle btn-small mr-4 neu-build-convex neu-small d-flex fx-center vcenter"
+            aria-label="Fake previous"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:skip-backward"></span>
+          </button>
+          <button
+            class="btn btn-circle large mx-1 neu-build-concave neu-small font-s3 d-flex fx-center vcenter"
+            aria-label="Fake play"
+            data-neu-build-click="neu-build-bordered"
+          >
+            <span class="iconify-inline font-s6" data-icon="mdi:play"></span>
+          </button>
+          <button
+            data-neu-build-click="neu-build-pressed"
+            class="btn btn-circle btn-small ml-4 neu-build-convex neu-small d-flex fx-center vcenter"
+            aria-label="Fake next"
+          >
+            <span class="iconify-inline font-s3" data-icon="mdi:skip-forward"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="device-stripe"></div>
+    <div class="device-header z-index-3"></div>
+    <div class="device-sensors"></div>
+    <div class="device-btns"></div>
+    <div class="device-power"></div>
+    <div class="device-home"></div>
+  </div>
+</div>
+
+<p class="text-center">This preview allow you to see what you will get using the selected color.</p>
+
+    </div>
+  </div>
+</div>
+
+
+        </main><footer class="footer fx-center text-center">Neumorph Axentix Framework - Made with ♥ by Axel SIMONET & Vincent LEVEQUE</footer>
+
+        
+        
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/neu-axentix@1.6.1/dist/js/neu-axentix.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@2.1.2/dist/iconify.min.js" integrity="sha256-yjIu0AqCpNVrJGG7vGaQ3Vh31hkcPFqOl+gdQQ8jrdg=" crossorigin="anonymous"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <script src="/axentix/axentix.min.c38c5daa9940041bc65062911d578031b85c3b56e5e60f2903f5a5a97166f4ec.js"></script>
+        <script src="/js/prism.8c7a75416846abdaf741adfbefbd3a22e48bae7de42a029ab0fad37e0101cb40.js"></script>
+        <script src="/js/home.min.7cdc20e22f56714f69c83f8c104555b002aa9d79f63a336208b2ca16b334aced.js"></script>
+         
+        
+            <script src="/js/builder/builder.min.1902c7892667fb8a1bc2ed2cd905415cabd342ce778d9572e6ab1fb41ee88da8.js"></script>
+        
+
+        
+        
+        <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149763613-2"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+  
+          gtag('config', 'UA-149763613-2');
+        </script>
+        
+    </body>
+</html>
