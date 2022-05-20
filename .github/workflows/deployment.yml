@@ -1,0 +1,52 @@
+---
+name: deploy
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get latest neu-axentix version
+        id: neu-axentix-version
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: axentix/neumorphic
+          excludes: prerelease, draft
+
+      - name: Get latest axentix version
+        id: axentix-version
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: axentix/axentix
+          excludes: prerelease, draft
+
+      - name: Install node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build docs
+        run: npm run build -- --minify --baseURL https://neu.useaxentix.com
+        env:
+          AX_ENV: production
+          AX_LATEST_VERSION: ${{ steps.axentix-version.outputs.release }}
+          AX_LATEST_NEU_VERSION: ${{ steps.neu-axentix-version.outputs.release }}
+
+      - name: Deploy docs
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: ./public
