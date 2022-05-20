@@ -15,7 +15,7 @@
         class="flat horizontal ml-auto z-index-1 my-3"
         id="neu-ads-home"
       ></div>
-      <em>Latest version: {{ .Site.Params.current }}</em>
+      <em>Latest version: {{ .Site.Params.current | default (getenv "AX_LATEST_NEU_VERSION") }}</em>
     </div>
   </div>
 </section>
