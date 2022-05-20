@@ -23,16 +23,12 @@ jobs:
           repository: axentix/neumorphic
           excludes: prerelease, draft
 
-      - name: Get destination directory
-        id: dest-dir
-        run: |
-          BRANCH=${GITHUB_REF##*/}
-          echo ::set-output name=DIR::${BRANCH:2}
-
-      - name: Get default branch
-        run: |
-          DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
-          echo "default_branch_ref=refs/heads/$DEFAULT_BRANCH" >> $GITHUB_ENV
+      - name: Get latest axentix version
+        id: axentix-version
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: axentix/axentix
+          excludes: prerelease, draft
 
       - name: Install node
         uses: actions/setup-node@v3
@@ -42,43 +38,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build main docs
-        if: ${{ env.default_branch_ref == github.ref }}
+      - name: Build docs
         run: npm run build -- --minify --baseURL https://neu.useaxentix.com
         env:
           AX_ENV: production
-          AX_CURRENT_BRANCH: ${{ steps.dest-dir.outputs.DIR }}
-          AX_LATEST_VERSION: ${{ steps.neu-axentix-version.outputs.release }}
-
-      - name: Build docs
-        if: ${{ env.default_branch_ref != github.ref }}
-        run: npm run build -- --minify --baseURL https://neu.useaxentix.com/${{ steps.dest-dir.outputs.DIR }}
-        env:
-          AX_ENV: production
-          AX_CURRENT_BRANCH: ${{ steps.dest-dir.outputs.DIR }}
-          AX_LATEST_VERSION: ${{ steps.neu-axentix-version.outputs.release }}
-
-      - name: Get versions
-        id: versions
-        run: |
-          BRANCHES=$(git branch -r --list origin/v-* | tr '*' ' ' | tr 'origin/v-' ' ' | xargs | tr ' ' '\n')
-          BRANCHES="${BRANCHES//'%'/'%25'}"
-          BRANCHES="${BRANCHES//$'\n'/'%0A'}"
-          BRANCHES="${BRANCHES//$'\r'/'%0D'}"
-          echo ::set-output name=VERSIONS::${BRANCHES}
-
-      - name: Deploy main docs
-        if: ${{ env.default_branch_ref == github.ref }}
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
-        with:
-          branch: gh-pages
-          folder: ./public
-          clean-exclude: "${{ steps.versions.outputs.VERSIONS }}"
+          AX_LATEST_VERSION: ${{ steps.axentix-version.outputs.release }}
+          AX_LATEST_NEU_VERSION: ${{ steps.neu-axentix-version.outputs.release }}
 
       - name: Deploy docs
-        if: ${{ env.default_branch_ref != github.ref }}
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
           branch: gh-pages
           folder: ./public
-          target-folder: ${{ steps.dest-dir.outputs.DIR }}

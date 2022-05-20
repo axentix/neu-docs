@@ -6,7 +6,7 @@ sectionPagesMenu: "main"
 enableRobotsTXT: true
 defaultContentLanguage: "en"
 params:
-  current: 1.6.1
+  current: 2.0.0
   ax_current: 2.0.1
 
 minify:
