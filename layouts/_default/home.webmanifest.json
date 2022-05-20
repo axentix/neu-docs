@@ -1,6 +1,6 @@
 {
-  "name": "Axentix",
-  "short_name": "Axentix",
+  "name": "Neu-Axentix",
+  "short_name": "Neu-Axentix",
   "icons": [
     {
       "src": "{{ .Site.BaseURL }}/android-chrome-192x192.png?v=2",
