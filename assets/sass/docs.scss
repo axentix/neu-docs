@@ -154,7 +154,7 @@ main {
     &.active,
     &:hover {
       color: getColor('airforce', 'dark', 4) !important;
-      border-color: getColor('primary');
+      border-color: getColor('secondary');
     }
   }
 }
