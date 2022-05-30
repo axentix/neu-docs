@@ -5,7 +5,7 @@
         
         <meta name="description" content="Neu-Axentix - Builder. Choose the theme colors and download the generated shadows." />
         <meta property="og:description" content="Neu-Axentix - Builder. Choose the theme colors and download the generated shadows." />
-        <meta property="og:title" content="Axentix - Modern framework to build websites faster" /><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta property="og:title" content="Neu-Axentix - The best neumorphism design framework" /><meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta name="author" content="Axentix Team" />
 <meta name="copyright" content="axentix team" />
@@ -930,6 +930,17 @@
          
         
             <script src="/js/builder/builder.min.1902c7892667fb8a1bc2ed2cd905415cabd342ce778d9572e6ab1fb41ee88da8.js"></script>
+            <script>
+                function initCaptcha() {
+                  grecaptcha.render('captcha', {
+                    sitekey: '6LcZz-cUAAAAAN88s4UtgI_JG43afeCYeAEA-MUL',
+                    callback: handleCaptcha,
+                    'expired-callback': expiredCaptcha,
+                    theme: 'light'
+                  });
+                }
+              </script>
+              <script src="https://www.google.com/recaptcha/api.js?onload=initCaptcha&render=explicit" async defer></script>
         
 
         
