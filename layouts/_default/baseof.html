@@ -5,7 +5,7 @@
         {{ $description := "The official Axentix neumorphism design implementation. Start using neumorphism shadows in 3 easy steps." }}
         <meta name="description" content="{{ .Page.Params.description | default $description }}" />
         <meta property="og:description" content="{{ .Page.Params.description | default $description }}" />
-        <meta property="og:title" content="Axentix - Modern framework to build websites faster" />
+        <meta property="og:title" content="Neu-Axentix - The best neumorphism design framework" />
         {{- partial "head.html" . -}}
         {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed") }}
         {{ $axentix := resources.Get "axentix/axentix.min.css" | fingerprint }}
@@ -66,6 +66,17 @@
         {{ if eq .Title "Builder" }} 
         {{ $builder := resources.Get "js/builder/builder.js" | js.Build | minify | fingerprint }}
             <script src="{{$builder.RelPermalink}}"></script>
+            <script>
+                function initCaptcha() {
+                  grecaptcha.render('captcha', {
+                    sitekey: '6LcZz-cUAAAAAN88s4UtgI_JG43afeCYeAEA-MUL',
+                    callback: handleCaptcha,
+                    'expired-callback': expiredCaptcha,
+                    theme: 'light'
+                  });
+                }
+              </script>
+              <script src="https://www.google.com/recaptcha/api.js?onload=initCaptcha&render=explicit" async defer></script>
         {{ end }}
 
         {{ $env := getenv "AX_ENV" }}
